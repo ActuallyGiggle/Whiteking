@@ -628,6 +628,14 @@ FakeEvents.Shade_Real   = RemotesFolder:WaitForChild("ShadeResult")
 FakeEvents.A90_Real     = RemotesFolder:FindFirstChild("A90")
 FakeEvents.Surge_Real   = RemotesFolder:FindFirstChild("SurgeRemote")
 
+if RemotesFolder:FindFirstChild("FootstepRemoteThatWeNeed") then
+    local RealRemote = RemotesFolder:FindFirstChild("FootstepRemoteThatWeNeed")
+    RealRemote:Destroy()
+
+    local FakeRemote = Instance.new("RemoteEvent", RemotesFolder)
+    FakeRemote.Name = "FootstepRemoteThatWeNeed"
+end
+
 Globals.FogInstances = {}
 Globals.OldFog = Services.Lighting.FogEnd
 
