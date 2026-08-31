@@ -1,7 +1,7 @@
-if Abysall then
+if Whiteking then
     return 
 end
-getgenv().Abysall = {
+getgenv().Whiteking = {
     Legit = true
 }
 
@@ -9,17 +9,18 @@ local GameList = {
   [2440500124] = "Doors"
 }
 
-local BaseUrl = "https://raw.githubusercontent.com/bocaj111004/Abysall/refs/heads/main/"
-getgenv().Abysall = {
+local BaseUrl = "https://raw.githubusercontent.com/ActuallyGiggle/Whiteking/refs/heads/main/"
+
+getgenv().Whiteking = {
     Environment = loadstring(game:HttpGet(BaseUrl .. "Components/Environment.luau"))(),
     ESPLibrary = loadstring(game:HttpGet(BaseUrl .. "Components/ESP.luau"))(),
 
-    Legit = true, -- pog
+    Legit = true,
 }
 
 local function CloneReference(Object)
-    if Abysall and Abysall.Environment.cloneref then
-        return Abysall.Environment.cloneref(Object)
+    if Whiteking and Whiteking.Environment.cloneref then
+        return Whiteking.Environment.cloneref(Object)
     else
         return Object
     end
@@ -31,16 +32,16 @@ local Services = setmetatable({}, {
     end
 })
 
-if Abysall.Environment.writefile and Abysall.Environment.readfile then
-    if not Abysall.Environment.isfile("Abysall/UserData.json") then
+if Whiteking.Environment.writefile and Whiteking.Environment.readfile then
+    if not Whiteking.Environment.isfile("Whiteking/UserData.json") then
         local Data = {
             TotalExecutions = 0,
             UILibrary = "Obsidian"
         }
-        Abysall.Environment.writefile("Abysall/UserData.json", Services.HttpService:JSONEncode(Data))
+        Whiteking.Environment.writefile("Whiteking/UserData.json", Services.HttpService:JSONEncode(Data))
     end
 
-    local UserData = Abysall.Environment.readfile("Abysall/UserData.json")
+    local UserData = Whiteking.Environment.readfile("Whiteking/UserData.json")
     local Decoded = Services.HttpService:JSONDecode(UserData)
     if not Decoded.TotalExecutions then
         Decoded.TotalExecutions = 0    
@@ -52,14 +53,14 @@ if Abysall.Environment.writefile and Abysall.Environment.readfile then
         Decoded.UILibrary = "Obsidian"
     end
 
-    Abysall.TotalExecutions = Decoded.TotalExecutions
-    Abysall.UILibrary = Decoded.UILibrary
+    Whiteking.TotalExecutions = Decoded.TotalExecutions
+    Whiteking.UILibrary = Decoded.UILibrary
 
-    Abysall.Environment.writefile("Abysall/UserData.json", Services.HttpService:JSONEncode(Decoded))
+    Whiteking.Environment.writefile("Whiteking/UserData.json", Services.HttpService:JSONEncode(Decoded))
 end
 
-Abysall.Interface = loadstring(game:HttpGet(BaseUrl .. "Components/Interface.luau"))()
-Abysall.Analytics = loadstring(game:HttpGet(BaseUrl .. "Components/Analytics.luau"))()
+Whiteking.Interface = loadstring(game:HttpGet(BaseUrl .. "Components/Interface.luau"))()
+Whiteking.Analytics = loadstring(game:HttpGet(BaseUrl .. "Components/Analytics.luau"))()
 
 local CurrentGame = GameList[game.GameId]
 if CurrentGame then
