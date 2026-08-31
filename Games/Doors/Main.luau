@@ -1,5 +1,5 @@
 local LoadStart = tick()
-Abysall.SavePath = "Doors/Game"
+Whiteking.SavePath = "Doors/Game"
 
 local Library = Whiteking.Interface.Library
 local SaveManager = Whiteking.Interface.SaveManager
