@@ -1,9 +1,9 @@
 local LoadStart = tick()
 Abysall.SavePath = "Doors/Game"
 
-local Library = Abysall.Interface.Library
-local SaveManager = Abysall.Interface.SaveManager
-local ThemeManager = Abysall.Interface.ThemeManager
+local Library = Whiteking.Interface.Library
+local SaveManager = Whiteking.Interface.SaveManager
+local ThemeManager = Whiteking.Interface.ThemeManager
 
 local Toggles = Library.Toggles
 local Options = Library.Options
