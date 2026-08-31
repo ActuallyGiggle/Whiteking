@@ -1,4 +1,4 @@
-# Abysall Hub is a free doors exploit
+# Whiteking Hub is a free doors exploit
 ```
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ActuallyGiggle/Whiteking/refs/heads/main/Loader.luau"))()
 ```
