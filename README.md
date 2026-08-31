@@ -2,4 +2,4 @@
 ```
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ActuallyGiggle/Whiteking/refs/heads/main/Loader.luau"))()
 ```
-Feel free to use any of the source code for your own projects, but credit would be appreciated.
+Credits To Abysall Hub For Making This Happen
